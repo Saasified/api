@@ -1,6 +1,5 @@
-# Qwindo V3 Big Data Api
-
-This repository is the core of Qwindo.
-It serves the primary API and the Oauth2 Server
+# Laravel Project Skeleton
 
 It is built using Laravel, Passport, Scribe and some helper packages.
+
+Intended to be used for people building SaaS applications similar to Shopify and others.
