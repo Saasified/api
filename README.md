@@ -1,4 +1,6 @@
-# Laravel Project Skeleton for SaaS applications
+# Saasify
+
+A Laravel Project Skeleton for SaaS applications
 
 It is built using Laravel, Passport, Laratrust, Scribe and some helper packages.
 
