@@ -2,7 +2,7 @@
 
 It is built using Laravel, Passport, Laratrust, Scribe and some helper packages.
 
-Intended to be used for people building SaaS applications similar to Shopify and others.
+Intended to be used for people building SaaS applications similar to Shopify, Github and others.
 
 The reason to start this, is that the default Laravel project skeleton is oppiniondated for building simple applications, with optional usage of the API only by the owners of it.
 
