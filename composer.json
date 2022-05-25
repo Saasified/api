@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "saasify/saasify",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "A saas starter kit using Laravel.",
+    "keywords": ["framework", "laravel", "saas", "api", "oauth2", "cms", "ecommerce"],
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
