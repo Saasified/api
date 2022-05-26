@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CsrfCookieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('csrf-cookie', CsrfCookieController::class);
 
 Route::get('/', function () {
     return view('welcome');
