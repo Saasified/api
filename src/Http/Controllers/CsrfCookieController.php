@@ -8,7 +8,7 @@ use Response;
 
 class CsrfCookieController extends Controller
 {
-    function __invoke(Request $request)
+    public function __invoke(Request $request)
     {
         if ($request->expectsJson()) {
             return new JsonResponse(null, 204);

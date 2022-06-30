@@ -62,7 +62,10 @@ use Laratrust\Traits\LaratrustUserTrait;
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, LaratrustUserTrait, Notifiable;
+    use HasApiTokens;
+    use HasFactory;
+    use LaratrustUserTrait;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

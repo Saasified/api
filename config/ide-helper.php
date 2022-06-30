@@ -134,12 +134,12 @@ return [
     | for models.
     |
     | glob patterns are supported to easier reach models in sub-directories,
-    | e.g. `app/Services/* /Models` (without the space)
+    | e.g. `src/Services/* /Models` (without the space)
     |
     */
 
     'model_locations' => [
-        'app',
+        'src/Models',
     ],
 
     /*
