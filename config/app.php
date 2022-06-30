@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Saasify'),
 
     /*
     |--------------------------------------------------------------------------
@@ -139,8 +139,8 @@ return [
     */
 
     'maintenance' => [
-        'driver' => 'file',
-        // 'store'  => 'redis',
+        'driver' => 'cache',
+        'store' => 'redis',
     ],
 
     /*
