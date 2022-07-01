@@ -23,6 +23,7 @@
         "laravel/octane": "^1.2",
         "laravel/passport": "^10.4",
         "laravel/tinker": "^2.7",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "santigarcor/laratrust": "^7.1"
     },
     "require-dev": {

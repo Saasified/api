@@ -1,0 +1,42 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: saasified
+      MYSQL_USER: saasify
+      MYSQL_PASSWORD: password
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - mysql:/var/lib/mysql
+  redis:
+    image: redis:7.0
+    command: redis-server --save 60 1 --loglevel warning
+    ports:
+      - ${REDIS_PORT}:6379
+    volumes:
+      - redis:/data
+  minio:
+    image: minio/minio
+    command: server /data --console-address ":9001"
+    ports:
+      - ${MINIO_S3:-9000}:9000
+      - ${MINIO_ADMIN:-9001}:9001
+    volumes:
+      - minio:/data
+  mailhog:
+    image: mailhog/mailhog
+    environment:
+      MH_STORAGE: maildir
+    ports:
+      - ${MAILHOG_WEB:-1080}:1080
+      - ${MAILHOG_SMTP:-1025}:1025
+    volumes:
+      - mailhog:/maildir
+
+volumes:
+  mysql:
+  redis:
+  minio:
+  mailhog:

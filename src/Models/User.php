@@ -59,6 +59,8 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereDoesntHaveRole()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User wherePermissionIs($permission = '', $boolean = 'and')
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRoleIs($role = '', $team = null, $boolean = 'and')
+ * @property string $uuid
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUuid($value)
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
