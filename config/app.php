@@ -1,6 +1,4 @@
-<?php
-
-use Illuminate\Support\Facades\Facade;
+<?php declare(strict_types=1);
 
 return [
 
@@ -55,6 +53,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+
+    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
     'asset_url' => env('ASSET_URL'),
 

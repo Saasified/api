@@ -65,6 +65,20 @@ return [
 
     'tokensExpireIn' => env('PASSPORT_TOKENS_EXPIRE_IN', 3600), // 1h by default
     'refreshTokensExpireIn' => env('PASSPORT_REFRESH_TOKENS_EXPIRE_IN', 7200), // 2 hours by default
-    'personalAccessTokensExpireIn' => env('PASSPORT_PERSONAL_ACCESS_TOKENS_EXPIRE_IN', 3600 * 24 * 7 * 52), // 1 year by default
+    'personalAccessTokensExpireIn' => env(
+        'PASSPORT_PERSONAL_ACCESS_TOKENS_EXPIRE_IN',
+        3600 * 24 * 7 * 52
+    ), // 1 year by default
+
+    'middleware' => [
+
+        'stateful' => explode(',', env('PASSPORT_STATEFUL_DOMAINS', sprintf(
+            '%s%s%s',
+            'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
+            env('APP_URL') ? ',' . parse_url(env('APP_URL'), PHP_URL_HOST) : '',
+            env('FRONTEND_URL') ? ',' . parse_url(env('FRONTEND_URL'), PHP_URL_HOST) : ''
+        ))),
+
+    ],
 
 ];
