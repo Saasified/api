@@ -3,7 +3,7 @@
 # This template allows you to validate your PHP application.
 # The workflow allows running tests and code linting on the default branch.
 
-image: composer:2.0
+image: 16nsk/devcontainers:8.1-16
 
 
 pipelines:
