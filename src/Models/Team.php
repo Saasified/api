@@ -13,6 +13,7 @@ use Laratrust\Models\LaratrustTeam;
  * @property string|null $description
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Team newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Team newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Team query()

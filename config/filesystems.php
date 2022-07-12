@@ -52,7 +52,7 @@ return [
             'endpoint' => env('S3_PUBLIC_ENDPOINT'),
             'use_path_style_endpoint' => env('S3_PUBLIC_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
-            'public' => true
+            'public' => true,
         ],
 
     ],

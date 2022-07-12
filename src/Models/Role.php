@@ -15,6 +15,7 @@ use Laratrust\Models\LaratrustRole;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
  * @property-read int|null $permissions_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role query()

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
@@ -17,8 +19,8 @@ class EnsureFrontendRequestsAreStateful
     /**
      * Handle the incoming requests.
      *
-     * @param Request $request
-     * @param callable $next
+     * @param  Request  $request
+     * @param  callable  $next
      * @return Response
      */
     public function handle(Request $request, callable $next): Response
@@ -41,7 +43,7 @@ class EnsureFrontendRequestsAreStateful
     /**
      * Determine if the given request is from the first-party application frontend.
      *
-     * @param Request $request
+     * @param  Request  $request
      * @return bool
      */
     public static function fromFrontend(Request $request): bool

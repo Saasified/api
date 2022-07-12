@@ -16,9 +16,10 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     /**
      * Validate and update the given user's profile information.
      *
-     * @param mixed $user
-     * @param array $input
+     * @param  mixed  $user
+     * @param  array  $input
      * @return void
+     *
      * @throws ValidationException
      */
     public function update(mixed $user, array $input): void
@@ -50,8 +51,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     /**
      * Update the given verified user's profile information.
      *
-     * @param mixed $user
-     * @param array $input
+     * @param  mixed  $user
+     * @param  array  $input
      * @return void
      */
     protected function updateVerifiedUser(mixed $user, array $input): void

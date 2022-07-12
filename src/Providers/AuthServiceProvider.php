@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Providers;
 
@@ -28,7 +30,7 @@ class AuthServiceProvider extends ServiceProvider
 
         ResetPassword::createUrlUsing(function ($notifiable, $token) {
             return config('app.frontend_url')
-                . "/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
+                ."/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
         });
 
         Passport::hashClientSecrets();
