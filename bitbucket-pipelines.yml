@@ -14,8 +14,12 @@ pipelines:
             script:
               - composer install
               -  ./vendor/bin/phpunit
+            caches:
+              - composer
         - step:
             name: Lint
             script:
               - composer install
               - ./vendor/bin/pint --test
+            caches:
+              - composer
