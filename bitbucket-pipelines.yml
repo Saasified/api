@@ -13,7 +13,7 @@ pipelines:
             name: Test
             script:
               - composer install
-              -  ./vendor/bin/phpunit test
+              -  ./vendor/bin/phpunit
         - step:
             name: Lint
             script:
