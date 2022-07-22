@@ -26,8 +26,8 @@ class StoreSiteRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'slug' => 'string',
-            'uuid' => 'uuid',
+            'slug' => 'string|unique:sites',
+            'uuid' => 'uuid|unique:sites',
         ];
     }
 }
