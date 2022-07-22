@@ -14,11 +14,20 @@ class SiteTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+    public function test_user_without_sites_store_scope_cannot_create_a_site()
+    {
+        Passport::actingAs(
+            User::factory()->create(),
+        );
+
+        $site = Site::factory()->make()->toArray();
+
+        $response = $this->postJson('/sites', $site);
+
+        $response->assertStatus(403);
+    }
+
+
     public function test_user_can_create_a_site()
     {
         Passport::actingAs(
