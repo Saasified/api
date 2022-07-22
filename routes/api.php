@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware('auth:api')->get('/hello', function (Request $request) {
     return ['message' => 'Hello world!'];
 });
+
+Route::middleware('auth:api')->apiResource('/sites', SiteController::class);
