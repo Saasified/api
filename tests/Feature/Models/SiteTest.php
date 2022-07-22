@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Models;
 
+use App\Models\Site;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Laravel\Passport\Passport;
 use Tests\TestCase;
 
@@ -17,22 +17,22 @@ class SiteTest extends TestCase
      *
      * @return void
      */
-    public function test_create_new_site()
+    public function test_example()
     {
         Passport::actingAs(
             User::factory()->create(),
-            ['create-sites']
+            ['sites-store']
         );
 
-        $site = Site::factory()->make();
+        $site = Site::factory()->make()->toArray();
 
-        $response = $this->post('/sites');
+        $response = $this->postJson('/sites', $site);
 
         $response->assertStatus(201);
 
         $this->assertDatabaseHas('sites', [
-            'name' => $site->name,
-            'slug' => $site->slug,
+            'name' => $site['name'],
+            'slug' => $site['slug'],
         ]);
     }
 }
